@@ -17,15 +17,11 @@ class print implements Runnable{
             if (i < 1) {
                 break;
             }else {
-
                 System.out.println(Thread.currentThread().getName()+"-*******"+i);
             }
         }
-
     }
 }
-
-
 
 
 
