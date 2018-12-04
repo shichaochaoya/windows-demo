@@ -7,7 +7,7 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveAction;
 import java.util.logging.LoggingMXBean;
 
-
+/*
 class QuickSort {
     private int low;
     private int high;
@@ -18,36 +18,10 @@ class QuickSort {
         this.high = high;
         this.numbers = numbers;
     }
-    private static int partion(Long[] numbers,int low,int high){
-        Long soldier = numbers[low];
-        while (low < high) {
-            while (low < high) {
-                if (numbers[high] < soldier) {
-                    numbers[low] = numbers[high];
-                    break;
-                }
-                high--;
-            }
-            while (low < high) {
-                if (numbers[low] > soldier){
-                    numbers[high] = numbers[low];
-                    break;
-                }
-                low++;
-            }
-        }
-        numbers[low]=soldier;
-        return low;
-    }
 
-    public static void  qsort(Long[] numbers, int low, int high){
-        if (low < high) {
-            int soldier = partion(numbers ,low, high);
-            qsort(numbers,low,soldier-1);
-            qsort(numbers,soldier+1,high);
-        }
-    }
-}
+
+
+}*/
 
 
 
@@ -79,6 +53,15 @@ class ParallelQuickSort extends RecursiveAction {
         return low;
     }
 
+    public static void  qsort(Long[] numbers, int low, int high){
+        if (low < high) {
+            int soldier = partion(numbers ,low, high);
+            qsort(numbers,low,soldier-1);
+            qsort(numbers,soldier+1,high);
+        }
+    }
+
+
     public ParallelQuickSort(int threahold, Long[] numbers) {
         this.threahold = threahold;
         this.numbers = numbers;
@@ -96,7 +79,7 @@ class ParallelQuickSort extends RecursiveAction {
     @Override
     protected void compute() {
         if (high - low < threahold) {
-         QuickSort.qsort(numbers,low,high);
+            ParallelQuickSort.qsort(numbers,low,high);
         }else {
             int soldier =partion(numbers,low,high);
             ParallelQuickSort left=new ParallelQuickSort(low,soldier-1,numbers);

@@ -1,12 +1,12 @@
-package demo;
+
 
 public class Course {
 
     {
-        studentList = new Student[50];
+        studentList = new demo.Student[50];
     }
 
-    private Student[] studentList;
+    private demo.Student[] studentList;
 
     private int studentNumber;
     private String CourseName;
@@ -15,13 +15,13 @@ public class Course {
         CourseName = courseName;
     }
 
-    public void selectCourse(Student student) {
+    public void selectCourse(demo.Student student) {
         this.studentList[studentNumber] = student;
         this.studentNumber++;
     }
 
 
-    public Student[] getStudentList() {
+    public demo.Student[] getStudentList() {
         return this.studentList;
     }
 
@@ -29,7 +29,7 @@ public class Course {
         return this.studentNumber;
     }
 
-    public void dropStudent(Student student) {
+    public void dropStudent(demo.Student student) {
         int j=studentList.length;
         //遍历学生列表 找到名字一样的那个学生  然后从数组删除
         // 找到名字一样的学生后 记录下标 把数组最后一个元素 赋值给下标位置
