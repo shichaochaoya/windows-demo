@@ -1,4 +1,4 @@
-package meiJu;
+package enum_demo;
 
 public class EnumIndexText {
     enum Constants2{

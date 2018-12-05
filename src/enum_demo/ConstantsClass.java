@@ -1,4 +1,4 @@
-package meiJu;
+package enum_demo;
 
 public class ConstantsClass implements Constatants{
     public static void doit(int c){

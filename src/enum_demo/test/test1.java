@@ -1,4 +1,4 @@
-package meiJu.test;
+package enum_demo.test;
 enum enum1{
     Monday(1),Saterday(6),Sunday(7);
 

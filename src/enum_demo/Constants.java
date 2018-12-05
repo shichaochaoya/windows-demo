@@ -1,4 +1,4 @@
-package meiJu;
+package enum_demo;
 
 public enum Constants {
     Constants_A,
