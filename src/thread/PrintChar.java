@@ -13,7 +13,7 @@ public class PrintChar implements Runnable {
 
     @Override
     public void run() {
-        try {
+       /* try {
             for (int i = 0; i < time; i++) {
                 System.out.print(print);
                 if (i >= 20) {
@@ -23,6 +23,6 @@ public class PrintChar implements Runnable {
         }catch (Exception e){
             System.out.println(e);
         }
-        System.out.println();
+        System.out.println();*/
     }
 }
