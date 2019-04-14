@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DEMO</title>
+
+
+    <style>
+        #h1ID {
+            color: aqua;
+            font-size: 50px;
+            align-content: center
+        }
+    </style>
+</head>
+<body>
+<h1 id="h1ID" class="Xclass">一号字体</h1>
+<h1 id="h2ID" >2号字体</h1>
+<h1 id="h3ID" class="Xclass">3号字体</h1>
+
+<p class="Xclass">
+    这是一个段落
+    存一段话
+</p>
+<a href="http://www.baidu.com">我是个连接我可以跳到百度</a>
+<table>
+    <tr>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>姓名</th>
+    </tr>
+    <tr>
+        <td>王</td>
+        <td>28</td>
+        <td>你好</td>
+    </tr>
+    <tr>
+        <td>李</td>
+        <td>29</td>
+        <td>我不好</td>
+    </tr>
+</table>
+
+<select>
+    <option>我是第一个</option>
+    <option>我是第二个</option>
+    <option>我是第三个</option>
+    <option>我是第四个</option>
+</select>
+
+<input id="user" type="text" value="请输入username" name="我是一个按钮"/>
+<input type="button" value="提交" onclick="clickM()" name="我是一个按钮">
+
+<l id="h4ID">
+    <li>列表1</li>
+    <li>列表2</li>
+    <li>列表3</li>
+
+</l>
+
+</body>
+
+<script src="jquery-2.0.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+       /* $("p").click(function () {
+            $(this).hide();//消失 this表示当前点击的标签
+        });*/
+
+       /*var o = $(".Xclass");/!*类选择器*!/
+       /!* var o = $("h1");/!*标签选择器*!/!*!/
+
+
+       /!*$("#h1ID")/!*id选择器*!/!*!/
+
+
+        for (var i = 0;i<o.length;i++){
+           alert(o[i].innerHTML);
+       }*/
+
+
+       //$("select").get(0).selectedIndex = 3;//选中select的index
+        $("select").append("<option>6</option>")//添加
+
+
+    });
+</script>
+
+<!--<script>
+    document.write("<h1>你好我是一个脚本</h1>")
+
+    function clickM() {
+        var v = document.getElementById("user");
+        if (v.value.length>5){
+            alert("超长");
+        }
+        for (var i = 3;i>0;i&#45;&#45;){
+            alert(i);
+        }
+    }
+</script>-->
+
+</html>
