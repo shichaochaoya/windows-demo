@@ -1,0 +1,37 @@
+server:
+  port: 8011
+
+eureka:
+  client:
+    lease:
+      duration: 5
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: product-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dharma_mall?useSSL=FALSE&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  redis:
+    # Redis服务器地址
+    host: 127.0.0.1
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码（默认为空）
+    password:
+  data:
+    mongodb:
+      database: dharma
+      port: 27017
+      host: localhost
+
+management:
+    security:
+      enabled: false
